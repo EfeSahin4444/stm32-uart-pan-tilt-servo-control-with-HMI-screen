@@ -1,0 +1,1 @@
+-e "Debug/\nRelease/\n*.bin\n*.hex\n*.elf\n*.o\n*.d\n*.su\n.settings/\n*.launch" 
