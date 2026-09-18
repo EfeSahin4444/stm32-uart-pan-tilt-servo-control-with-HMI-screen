@@ -1,0 +1,26 @@
+# STM32 Pan-Tilt Servo Control System
+
+Hello! This repository contains a Pan-Tilt motor control project I developed to improve my skills in embedded systems and hardware programming. It serves as a strong foundation for my future robotics projects involving computer vision (OpenCV) autonomous target tracking, as well as for my TÜBİTAK and TEKNOFEST competition applications.
+
+## 🚀 About the Project
+In this project, rather than controlling a Pan-Tilt mechanism with basic blocking delays, I aimed to design a structured, responsive embedded system using core hardware features of the microcontroller, such as hardware timers, interrupts, and serial communication.
+
+### 🛠️ Key Features & What I Implemented
+- **Hardware PWM (TIM2):** Direct PWM signal generation via hardware timers for jitter-free and stable servo motor operation.
+- **Smooth Acceleration (Ramping Algorithm):** Instead of jumping to target positions abruptly, the motors accelerate and decelerate smoothly using a dedicated TIM1 hardware timer interrupt running at regular intervals (10ms).
+- **HMI Screen Control via UART:** Target positions and commands are sent from an external HMI display over UART, parsed in real time, and translated into servo movements.
+- **UART Telemetry Output:** Real-time feedback including current velocity, target values, and system status is continuously transmitted over UART to a serial monitor.
+- **Emergency Stop (EXTI):** An external push-button interrupt immediately locks the system into a safe state and halts all motion upon being triggered.
+
+## 🧰 Hardware & Tools Used
+- **Microcontroller:** STM32 Nucleo-F303RE
+- **Actuators:** 2-Axis (Pan-Tilt) Servo Motor Mechanism
+- **User Interface:** HMI Display (Communicating via UART)
+- **Development Environment:** STM32CubeIDE
+- **Library:** STM32 HAL (Hardware Abstraction Layer)
+- **Language:** C
+
+## 🎥 Working Video
+*(You can watch the working mechanism and the real-time telemetry data flow on the terminal in the video below.)*
+
+[Insert Working Video Here]
